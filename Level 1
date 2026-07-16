@@ -1,7 +1,7 @@
   Level 0
              ssh bandit0@bandit.labs.overthewire.org -p 2220
              pass :
-                  bandit0
+                  bandit0                                  By Default
 
    level 1
              ssh bandit1@bandit.labs.overthewire.org -p 2220
@@ -31,8 +31,16 @@
 
 
    Level 4
-            ssh bandit3@bandit.labs.overthewire.org -p 2220
-            pass : xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq      From L3
+            ssh bandit4@bandit.labs.overthewire.org -p 2220
+            pass :
+                  xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq      From L3
+            Tip : Use cat ./ to open file start with hyphen
+                  Check all file in inhere one by one
+   Level 5
+            ssh bandit5@bandit.labs.overthewire.org -p 2220
+            pass :
+                  6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG      From L4
+
 
 
 

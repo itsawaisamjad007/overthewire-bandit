@@ -1,0 +1,57 @@
+__________________________________________________________________________________________
+|                                                                                          |
+|                 ⚔️ OVERTHEWIRE (BANDIT) A TO Z MASTER ROADMAP & CHEAT SHEET ⚔️             |
+|                 ===========================================================              |
+|                                                                                          |
+|==========================================================================================|
+| PHASE 1: DIRECTORY NAVIGATION & FILE BYPASSES (Level 0 - 10)                             |
+|==========================================================================================|
+|  * ssh bandit0@bandit.labs.overthewire.org -p 2220  --> Level 0 me login karne ka tariqa.|
+|  * cat ./-file.txt       --> Hyphen/Dash se shuru hone wali file ko open karna.          |
+|  * cat "spaces in name"  --> Spaces wali file ko open karna.                             |
+|  * ls -la                --> Hidden files (jo '.' se shuru hoti hain) ko dekhne ke liye. |
+|  * file filename         --> File ki actual type check karna (ke text hai ya binary).     |
+|                                                                                          |
+|==========================================================================================|
+| PHASE 2: SEARCHING & FILTERING DATA (Level 11 - 15)                                      |
+|==========================================================================================|
+|  * find . -type f -size 1033c --> Current directory (.) me 1033 bytes ('c') ki file      |
+|                                   dhoondna (Size filtering).                             |
+|  * find / -user bandit7 -group bandit6 -size 33c 2>/dev/null  --> Pure system (/) me     |
+|    bandit7 user ki 33 bytes ki file dhoondna aur permission errors (2>) ko chupana.     |
+|  * grep "keyword" file   --> File ke andar se specific text/password filter karna.       |
+|  * sort file | uniq -u   --> File ke andar repeat hone wali lines me se sirf "unique"    |
+|                               (jo ek hi baar aayi ho '-u') line nikalna.                 |
+|  * strings filename      --> Human-readable text nikalna kisi corrupt ya binary file se. |
+|                                                                                          |
+|==========================================================================================|
+| PHASE 3: DECRYPTION & DATA MANIPULATION (Level 16 - 20)                                  |
+|==========================================================================================|
+|  * base64 -d file        --> Base64 encoded text ya password ko decode (decrypt) karna.   |
+|  * tr 'A-Za-z' 'N-ZA-Mn-za-m' < file  --> ROT13 cipher ko decode karne ki command.        |
+|  * xxd -r hexfile > bin  --> Hex dump ko wapis original binary file me convert karna.     |
+|  * tar, gzip, bzip2      --> Compressed files ko extraction ke liye:                     |
+|                              - 'tar -xf file.tar'  - 'gunzip file.gz'                    |
+|                                                                                          |
+|==========================================================================================|
+| PHASE 4: NETWORK PORTS & ENCRYPTION (Level 21 - 26)                                      |
+|==========================================================================================|
+|  * nc localhost 30000    --> Netcat ke zariye local computer ke port 30000 par connect    |
+|                              hona aur password bhej kar response lena.                   |
+|  * openssl s_client -connect localhost:30001  --> SSL/TLS encrypted port par connect     |
+|                                                    hoke secure communication karna.       |
+|  * nmap -p 31000-32000 localhost  --> Local ports ko scan karna active services ke liye. |
+|                                                                                          |
+|==========================================================================================|
+| PHASE 5: CRONJOBS & PRIVILEGE ESCALATION (Level 27 - 34)                                 |
+|==========================================================================================|
+|  * ls -l /etc/cron.d/    --> Background me chalne wale automatic scripts (Cronjobs) ko    |
+|                              check karna aur unke execution path ko exploit karna.       |
+|  * git log / git show    --> Level 27+ me Git repositories ke purane commits aur branches  |
+|                              ke andar chupe hue passwords nikalna.                       |
+|  * mktemp -d             --> Write-permissions na hone par temporary writable folder     |
+|                              banane ke liye (/tmp directory me).                         |
+|  * shell bypass          --> Custom text editor (jaise vi/nano) me se shell nikalne      |
+|                              ke liye command terminal bypass: ':set shell=/bin/sh' then  |
+|                              ':shell' ya ':!sh' run karna.                               |
+|__________________________________________________________________________________________|
