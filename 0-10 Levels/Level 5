@@ -6,6 +6,23 @@ Level 5
             pass :
                   6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG      From L4
            Tip :
+           First we see tip in over the wire web
+           * human readable
+           * 1033 byte
+           * non executeable
+
+            Then we use "find" command as
+            {find . -size 1033c}
+            where . is used to search or find from current location
+            where c show byte
+            then path will specify to us
+            where we check by ls -la and
+            open file show in find path which
+            is non executable.
+
+ Short Way : not prefer first
+
+
                 By using filter in main directory
                { grep -rE '^[a-zA-Z0-9]{32}$' .}
 
