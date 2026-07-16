@@ -1,0 +1,10 @@
+
+
+
+
+ Level 4
+            ssh bandit4@bandit.labs.overthewire.org -p 2220
+            pass :
+                  xzTXq1rDJQVVAzdv5cHq1TQytTWufAMq      From L3
+            Tip : Use cat ./ to open file start with hyphen
+                  Check all file in inhere one by one

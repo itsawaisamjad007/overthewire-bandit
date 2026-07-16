@@ -1,0 +1,19 @@
+
+
+
+Level 5
+            ssh bandit5@bandit.labs.overthewire.org -p 2220
+            pass :
+                  6C7h9GD8M6ai5nr7wo1RonrzFjj9yIrG      From L4
+           Tip :
+                By using filter in main directory
+               { grep -rE '^[a-zA-Z0-9]{32}$' .}
+
+               grep → Search karega.
+              -r → Sab directories aur sub-directories mein search karega.
+              -E → Extended Regex enable karega ({32} use karne ke liye).
+               ^ → Line ki shuruaat.
+              [a-zA-Z0-9] → Sirf small letters, capital letters aur digits allow hain.
+               {32} → Bilkul 32 characters hone chahiye.
+                $ → Line yahin khatam honi chahiye.
+                . → Current directory se search shuru karo.

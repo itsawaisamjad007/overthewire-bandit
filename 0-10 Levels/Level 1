@@ -1,0 +1,31 @@
+
+
+   level 1
+             ssh bandit1@bandit.labs.overthewire.org -p 2220
+             pass :
+                   6y2kwnwK6grgvwvpvLaa2T1cpFEKOhNR       From L0
+             Tip :
+                   cat ./- is used if file name is special character
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

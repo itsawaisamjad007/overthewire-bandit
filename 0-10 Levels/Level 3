@@ -1,0 +1,15 @@
+
+
+
+
+
+Level 3
+             ssh bandit3@bandit.labs.overthewire.org -p 2220
+             pass :
+                   7ZZ2LFrykP2zEyvBl4m3clcL7tGYJPME    From L2
+             Tip :
+                  Firt we use <file inhere> to know type of file
+                 and then use ls -a for visible hidden file and then
+                 use the same format of cat as used in previous level
+                 for space as cat -- ""
+

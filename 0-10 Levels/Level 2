@@ -1,0 +1,11 @@
+
+
+
+
+ Level 2
+              ssh bandit2@bandit.labs.overthewire.org -p 2220
+              pass :
+                    PK8fYLZg2hnHSz83plBL1iEPKdD3QToB      From L1
+              Tip :
+                    cat -- "--spaces in this filename--"  <cat -- and
+                    double quotes are use when file name have spaces and -->
