@@ -2,5 +2,10 @@
 ssh bandit7@bandit.labs.overthewire.org -p 2220
 
  pass : 
+      
        Bmnnvf82KzQlfxgAI2d1zYbr1u9pr3E3
- 
+
+Tips :
+      As requirements are a file name data.txt and having many word the password is
+      next to word millionth 
+      So We use { grep "millionth" data.txt }
