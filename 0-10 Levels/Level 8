@@ -1,10 +1,21 @@
 
 
 Level 8
-        ssh bandit7@bandit.labs.overthewire.org -p 2220
+        ssh bandit8@bandit.labs.overthewire.org -p 2220
        
 
 
 pass :
       VR1ljMayciFxbnUokuQmJFw6QC9VKtub
-      
+
+Tips : 
+        In this level the requirements was a file name data.txt which have multiple password with duplication
+        the real password condition was that it was unique .
+
+        So we use { sort data.txt | uniqu -u }
+        * In this command first we use sort commant to arrange the content of file in proper way so it can be 
+         searched easily
+        * Where we use pipe { | } symbol to combine two command in such a way that the output of first command 
+          is used as input for next command so we first arrange them then search unique password by using
+          { uniq -u } command
+
