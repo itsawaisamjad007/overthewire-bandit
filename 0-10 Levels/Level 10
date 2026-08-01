@@ -6,3 +6,18 @@ Level 10 :
 
 Pass : 
        B0s2khmbT9u0geKuOoVGW3JZKhndE3BG
+
+
+Tips :
+      * In this level the requirements was that password is stored in a file data.txt 
+       in base64 form encryption so 
+
+      * We first open the file data.txt and check content from it which we see in
+       base 64 form 
+
+      * Then we check the manual of base64 and chick its option for decode it
+
+      * By checking manual of base64 we run command
+        base64 -d -i data.txt 
+        and password will appear in this command -d is used to decode data
+        and -i is used to ignore the garbage data 

@@ -13,4 +13,4 @@ Tips :
 
       In this we use strings to only search first human readable character then we use | to take
       it as input for grep "="  where we use grep to search character lines start with "=" sign
-      In this way we choose line from output as password by using common sense and character sequence
+      In this way we choose line from output as password by using common sense and character sequencegi
