@@ -1,7 +1,23 @@
 
-Level 11
-        ssh bandit11@bandit.labs.overthewire.org -p 2220
-
+Level 11 
+       ssh bandit11@bandit.labs.overthewire.org -p 2220
 
 Pass :
       pYfOY6HwUsDj5rL9UvyhU7MCmv8vN5Ro
+
+Tip:
+   * In this level the requirement was password was stored in a file data.txt 
+     in which alphabets are rotated by 13 positions means that A = N , a = n and 
+     B = O , b = o .
+
+   * So in this level first we use cat command and then tr command which is 
+     used for translate from one format to another.
+
+   * So we use 
+     cat data.txt | tr 'abcdefghijklmnopqrstuvwxyz' 'nopqrstuvwxyzabcdefghijklm'| tr 'ABCDEFGHIJKLMNOPQRSTUVWXYZ' 'NOPQRSTUVWXYZABCDEFGHIJKLM'
+     
+   * Where first cat command is used to show output and pipe is used to take content show
+     by cat as input and then first we write the format which we want to translate and then
+     then the format in which we want to translate because the content consist of A-Z and a-z
+     both case then we used another tr command to also convert upper case remaned untranslate
+     in first tr and translate them also in ROT13 format  
