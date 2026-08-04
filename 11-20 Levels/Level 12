@@ -4,3 +4,29 @@ Level 12
 
 Pass :
          GROozWPO8QyN0mGrjUkID0WCYkZiQxrN
+
+ Tips :
+
+       * In this level requirements are The password for the next level is stored in the file data.txt, which is a hexdump of a file      has been repeatedly compressed. For this level it may be useful to create a directory under /tmp in which you can work.    
+         use  mkdir with a hard to guess directory name. Or better, use the command “mktemp -d”. Then copy the datafile using cp, and    rename it using mv (read the manpages!)
+
+       * In this level first we create a temp file using mktemp command this is because it is very useful in additional working or 
+        practice if data in temp file corrupt then the real data is not affected temp file use is a good practice so then we copy 
+        data.txt file in created temp directory.
+
+       * In temp directory first we check the content which is in hexdump form so we usse xxd command and check its manual to
+         convert data into decimal in another file named data as {xxd -r data.txt data}
+
+       * Then we check the type of file using file command it would be gzip compressed so we check manual of bzip to decompress
+         it . Before it first we change the file name with extention .gz using {mv data data.dz} then we decompressed it using
+         {gzip -d data.gz}.
+
+       * Then we again get file data because due to decompressed its .gz extention remove then we again check type of file
+         which is bzip2 then we again change file name usin .bz2 and check manual od bzip2 and decompress it using
+         {bzip2 -d data.bz2}
+
+       * Then a tar file created we extract it using {tar -xf data.tar} command then again gzip file compressed file will
+         we again decompressed it
+       * We check again and again type of file given compressed then decompressed it
+
+       * At last an ASCII Type file given which we open using cat and which is our password     
